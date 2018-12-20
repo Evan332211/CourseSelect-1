@@ -25,16 +25,45 @@
 }
 
 footer {
-  background-color: #555;
+  //background-color: skyblue;
   color: white;
   padding: 10px;
+  position: relative;
 }
 
 .body-background{
-  background-image: image-url('background.jpg');
+  background-image: image-url('iiiii.jpg');
   //background-color: #DADADA;
   //background-repeat: no-repeat;
   //background-size: 100% 100%;
+  //background: url("../images/1.jpg");
+  max-width: 100%;
+  height: auto;
+  animation-name:myfirst;
+  animation-duration:10s;
+  /*变换时间*/
+  animation-delay:2s;
+  /*动画开始时间*/
+  animation-iteration-count:infinite;
+  /*下一周期循环播放*/
+  animation-play-state:running;
+
+  //position: relative;
+  //width: 36%;
+  //padding-bottom: 36%;
+  ////background-repeat: no-repeat;
+  //background-size: 200%;
+
+}
+
+
+@keyframes myfirst
+{
+
+  0%   {background:url("i.jpg") no-repeat ;opacity: 0.85; background-size:100% 100%;}
+  34%  {background:url("ii.jpg")no-repeat;opacity: 0.85; background-size:100% 100%;}
+  67%  {background:url("iii.JPG")no-repeat;opacity: 0.85; background-size:100% 100%;}
+  100% {background:url("iiii.jpg")no-repeat;opacity: 0.85; background-size:100% 100%;}
 }
 
 body{

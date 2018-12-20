@@ -1,4 +1,4 @@
-source 'http://gems.ruby-china.org'
+source 'http://gems.ruby-china.com'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'spreadsheet'
 gem 'roo'
@@ -67,5 +67,6 @@ end
 group :production do
   gem 'rails_12factor'
 end
+gem 'puma'
 
 
