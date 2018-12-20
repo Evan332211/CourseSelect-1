@@ -35,8 +35,8 @@
                   <%if comment.commented?%>
                       <td><%= link_to "修改评估", edit_comment_url(comment), class: 'btn btn-xs btn-info' %></td>
                   <% end %>
-                   <%if !comment.commented?%>
-                      <td><%= link_to "评估", edit_comment_url(comment), class: 'btn-sm btn-danger' %></td>
+                  <%if !comment.commented?%>
+                      <td><%= link_to "评估", edit_comment_url(comment), class: 'btn-sm btn-success' %></td>
                   <% end %>
                 </tr>
             <% end %>

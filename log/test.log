@@ -23049,3 +23049,1049 @@ Redirected to http://www.example.com/
 Filter chain halted as :correct_user rendered or redirected
 Completed 302 Found in 2ms (ActiveRecord: 1.0ms)
   [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (17.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.0ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "courses" DISABLE TRIGGER ALL;ALTER TABLE "semesters" DISABLE TRIGGER ALL;ALTER TABLE "notices" DISABLE TRIGGER ALL;ALTER TABLE "grades" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (17.8ms)[0m  DELETE FROM "courses"
+  [1m[36mFixture Insert (10.2ms)[0m  [1mINSERT INTO "courses" ("name", "course_code", "course_type", "teaching_type", "credit", "limit_num", "course_week", "course_time", "class_room", "exam_type", "open", "created_at", "updated_at", "id", "teacher_id", "semester_id") VALUES ('计算机体系结构', '091M4001H', '专业核心课', '课堂讲授为主', '60/3.0', NULL, '第2-20周', '周一(9-11)', '教1-107', '闭卷笔试', 't', '2017-01-07 03:56:59', '2017-01-07 03:56:59', 980190962, 258535826, 457863342)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "courses" ("course_code", "name", "course_type", "credit", "limit_num", "course_week", "course_time", "class_room", "teaching_type", "exam_type", "open", "created_at", "updated_at", "id", "teacher_id", "semester_id") VALUES ('091M4002H', '高级软件工程', '专业核心课', '60/3.0', NULL, '第2-20周', '周五(2-4)', '教1-107', '课堂讲授为主', '闭卷笔试', 't', '2017-01-07 03:56:59', '2017-01-07 03:56:59', 298486374, 369664257, 457863342)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "courses" ("course_code", "name", "course_type", "credit", "limit_num", "course_week", "course_time", "class_room", "teaching_type", "exam_type", "open", "created_at", "updated_at", "id", "teacher_id", "semester_id") VALUES ('091M4003H', '计算机网络', '专业核心课', '60/3.0', NULL, '第2-20周', '周五(2-4)', '教1-107', '课堂讲授为主', '闭卷笔试', 't', '2017-01-07 03:56:59', '2017-01-07 03:56:59', 113629430, 369664257, 457863342)[0m
+  [1m[35mFixture Delete (29.0ms)[0m  DELETE FROM "grades"
+  [1m[36mFixture Insert (8.0ms)[0m  [1mINSERT INTO "grades" ("grade", "created_at", "updated_at", "id", "course_id", "user_id") VALUES (60, '2017-01-07 03:56:59', '2017-01-07 03:56:59', 573891180, 980190962, 430533587)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 897771008, 113629430, 430533587)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 275203981, 980190962, 673255333)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 660633374, 980190962, 522600246)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 1047078566, 980190962, 103771790)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 158209585, 980190962, 824729113)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 386565014, 980190962, 793562046)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 537768711, 980190962, 407632687)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 956621503, 980190962, 21146263)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 235131434, 980190962, 910531074)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 515690427, 980190962, 653952915)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 700186416, 980190962, 301840136)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 545121052, 980190962, 368053678)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 393925521, 980190962, 586628415)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 242450997, 980190962, 1006529671)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 963949220, 980190962, 217668626)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 655369987, 980190962, 312330677)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 269948824, 298486374, 630913318)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 152978988, 298486374, 1016309918)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 1041856187, 298486374, 194287625)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 782658350, 298486374, 455837084)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 430005183, 298486374, 741127441)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 189837533, 298486374, 1054695019)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 1012367438, 298486374, 165310208)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 626971126, 298486374, 282279748)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 307880289, 298486374, 668209107)
+  [1m[36mFixture Insert (1.2ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 205354182, 298486374, 967875188)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 993674327, 298486374, 246917865)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 573773295, 298486374, 398392157)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 355739002, 298486374, 549047244)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 93010155, 298486374, 805754461)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 306938270, 113629430, 667316012)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 625783055, 113629430, 281108417)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 1011212471, 113629430, 164105733)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 188928034, 113629430, 1053769364)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 354829701, 113629430, 548121395)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 572618006, 113629430, 397188008)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 992486574, 113629430, 245746204)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 204411961, 113629430, 966982283)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 479201708, 113629430, 689825566)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 731330881, 113629430, 505075599)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 487200606, 113629430, 679999984)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 705505229, 113629430, 528533883)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 855930481, 113629430, 109680835)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "grades" ("created_at", "updated_at", "id", "course_id", "user_id") VALUES ('2017-01-07 03:56:59', '2017-01-07 03:56:59', 67323622, 113629430, 831432788)[0m
+  [1m[35mFixture Delete (9.0ms)[0m  DELETE FROM "notices"
+  [1m[36mFixture Insert (4.2ms)[0m  [1mINSERT INTO "notices" ("title", "text", "department", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notices" ("title", "text", "department", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 298486374)
+  [1m[36mFixture Delete (7.0ms)[0m  [1mDELETE FROM "semesters"[0m
+  [1m[35mFixture Insert (8.0ms)[0m  INSERT INTO "semesters" ("info", "created_at", "updated_at", "id") VALUES ('2016年春季学期', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 521374680)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "semesters" ("info", "created_at", "updated_at", "id") VALUES ('2016年秋季学期', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 457863342)[0m
+  [1m[35mFixture Delete (12.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (8.9ms)[0m  [1mINSERT INTO "users" ("name", "email", "admin", "password_digest", "created_at", "updated_at", "id") VALUES ('彭兆卿', 'student1@test.com', 't', '$2a$04$7eEOXkzP6JlSLXVSIfNnfu8TFi10OlxnG04OAR98GMLJQr2H5V5ma', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 762146111)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "num", "major", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('金融通', 'rongtongjin@gmail.com', '201628015007', '计算机软件与理论', '软件研究所', '$2a$04$ZD5AievPoFK9my3IA5ISJ.LgPpnCCw5NdUwxVdkl4ZwNRkj9y3vFm', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 430533587)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "teacher", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('罗铁坚', 'teacher4@test.com', 't', '计算机与控制学院', '$2a$04$KrnhCzPJvbbePd4T61muJO2EX0R0O3abhChdWuflMmoGeVZltTzJ6', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 369664257)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "teacher", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('胡伟武', 'teacher5@test.com', 't', '计算机与控制学院', '$2a$04$hR77B9d6Qhr0QCjcwMdjweLsR1bEm6NaKcZP3303d3f/eH1rXloou', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 258535826)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user0', 'user0@example.com', '计算机与控制学院', '$2a$04$tVEsWKrHkw03dSe2uhBhN.CeOZq9yHis/GpNtL8b3iMT4LjTUvkci', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 673255333)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user1', 'user1@example.com', '计算机与控制学院', '$2a$04$0zkcr64TNCsMX/G8dqeByeJLVmwXVA1w2MxgODDeezIv2ltSvUeIO', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 522600246)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user2', 'user2@example.com', '计算机与控制学院', '$2a$04$Pbs3U/bMIvJxJbxnybfboeiX9GkyKFDWsOFU4KciLPoTHeb0wPXX2', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 103771790)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user3', 'user3@example.com', '计算机与控制学院', '$2a$04$1IU2Z8weQQlrSiGsqalOPOOoaEKTotgeeeCXzLp9IB47N0sj574iy', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 824729113)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user4', 'user4@example.com', '计算机与控制学院', '$2a$04$X1rQEYUtgVHk9iUz7HkBgO7hTnbQaE0BSfAMZGSVhtzJI78onwUR2', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 793562046)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user5', 'user5@example.com', '计算机与控制学院', '$2a$04$J6TSLuyvJNSqguctk4fSc.upDctm91UlNTI5zkB1J76bhSy4iH5re', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 407632687)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user6', 'user6@example.com', '计算机与控制学院', '$2a$04$LNhkS1Nu8Zm2QJUlsHviau7ulkmWIgbrcvOiij.Um1s/luF5QYItq', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 21146263)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user7', 'user7@example.com', '计算机与控制学院', '$2a$04$NS4/Q8YUcz1oF4iApUy8de4f90pNFdeG78WOoqI9Jdzl4UPjsBsmK', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 910531074)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user8', 'user8@example.com', '计算机与控制学院', '$2a$04$HMT4wf9CU2deScvBgehzeunfRixy/KI/KAvkch2fpFCsyAL.cVjSS', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 653952915)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user9', 'user9@example.com', '计算机与控制学院', '$2a$04$3fvsbk8V6Y6qZmbfC7Ca4..omR93DA8HFRcjpaRrD4atJDi74q.Di', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 301840136)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user10', 'user10@example.com', '计算机与控制学院', '$2a$04$znXFgdN2SdA2CjxePebvROrbgiDZRCcWDokopOtPEbiYsqrnuoYVW', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 368053678)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user11', 'user11@example.com', '计算机与控制学院', '$2a$04$VJ3uFT1lyxgz.jYvDP4whOpYE0XWG/PInohA9grflxUlLJrTI6IBm', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 586628415)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user12', 'user12@example.com', '计算机与控制学院', '$2a$04$zl3OUwegF4hIIVAxPJaxW.LHm0Ac13mD7G2L7BwEl0mA9bIj2Dsti', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 1006529671)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user13', 'user13@example.com', '计算机与控制学院', '$2a$04$LPeQMNZxYALUmDPYY.SfH.AjjezPxxPiz.OQ4nSiDQzX939tfCXr.', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 217668626)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user14', 'user14@example.com', '计算机与控制学院', '$2a$04$9lKV4kFJpAzPCrFE8kHMfOxkatY9Gm61GqLFI.fOU5cmV5IqF07Iu', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 312330677)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user15', 'user15@example.com', '计算机与控制学院', '$2a$04$4CtNAAdS8qS1UB5.J5FZ.uGEV3PejLVQtHhbDUMo/FZs3v4jTwe6i', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 630913318)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user16', 'user16@example.com', '计算机与控制学院', '$2a$04$GOfaJpM4IcW0CAU2xjh4/.FeACFsyKZwuug34MIzST8pnuQ2lkTJ.', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 1016309918)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user17', 'user17@example.com', '计算机与控制学院', '$2a$04$gYi06yQ.QdLRgjpQ5B5HF.8nmF888K7bu5V/Shj5wsoj2rpG5U41y', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 194287625)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user18', 'user18@example.com', '计算机与控制学院', '$2a$04$ddkJhLXvZjbqhxQlw9tBcOp2T11mOVoaSC65IyPXzs6xHdyoWs5ty', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 455837084)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user19', 'user19@example.com', '计算机与控制学院', '$2a$04$8Nwrtr28XW5PbTdB6z.Gd.HvkTOdfIUkBzlF/N9DKdPacWQwZvzrC', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 741127441)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user20', 'user20@example.com', '计算机与控制学院', '$2a$04$nAx/ik0cZ43vAWt8K4qn0udfMroN/A2Xew07pOKTcN0ymD.XF.PVG', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 1054695019)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user21', 'user21@example.com', '计算机与控制学院', '$2a$04$1wFcCLObI8JTp.CMQa600OPjviSRgKR7ejtjvkRHB71zD22.uwirC', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 165310208)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user22', 'user22@example.com', '计算机与控制学院', '$2a$04$035Q7ITadQTQX3spCnbL2esDPTEM/pZY.YvrSbbKQRV0DXHqJYHLS', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 282279748)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user23', 'user23@example.com', '计算机与控制学院', '$2a$04$Tsg.nn6xCfchtaFTrtZkZOYLNi9HWJmnsHP1N8FDt5SXk8HeitsS2', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 668209107)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user24', 'user24@example.com', '计算机与控制学院', '$2a$04$J8S.7l3/4cs16kk8Hy8zdOWRjVyHieXWhabBKKM/6BG/AVbOfGD3a', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 967875188)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user25', 'user25@example.com', '计算机与控制学院', '$2a$04$8n0K6WQjMdP.t7Da4AclOe7OeZZY0UkjpuGJVKmohV5LCMxvAzLum', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 246917865)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user26', 'user26@example.com', '计算机与控制学院', '$2a$04$9AdstO/hInNUfSdrTYTQDO/i8xJFFxRA9X07KY7vjo5axVf55dq32', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 398392157)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user27', 'user27@example.com', '计算机与控制学院', '$2a$04$0hbD67oi69aKzhfqeukQB.OFz45mBq1MOM3a4b9aoiA80bWT5JN5u', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 549047244)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user28', 'user28@example.com', '计算机与控制学院', '$2a$04$AMB/lKdo3Hm01Hr0a/bgO.wBK.OUfSn.BVc6MIerYBWef78fA0ebq', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 805754461)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user29', 'user29@example.com', '计算机与控制学院', '$2a$04$U3ORYKRHUHU7kHmw07m0fOx0htSw3cLwqRHez..qkP8..6CIS9woa', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 117565134)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user30', 'user30@example.com', '计算机与控制学院', '$2a$04$lMMrJ7m3.huePy.7.a7Ehu7rx9K8kgkSSjT5M4xTXGE69OhfJHbIi', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 667316012)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user31', 'user31@example.com', '计算机与控制学院', '$2a$04$Zn.Luy0Rqr3YqFcvpo7Zi.gBlI9RlEjGkYUk1NHLP2XEvsFyRJ27q', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 281108417)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user32', 'user32@example.com', '计算机与控制学院', '$2a$04$uo79qjs/pTNEo2ztzIyM/u6oGG5ME6hLXKwcn2/xFLoyG2dAq.oWy', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 164105733)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user33', 'user33@example.com', '计算机与控制学院', '$2a$04$mCkhqg2FBipewuZczieIkOspzjHgapbuPKTw8PrKRD99tn7Z2Sa5q', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 1053769364)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user34', 'user34@example.com', '计算机与控制学院', '$2a$04$W3dsumgNU/4dKZyTStYHo.DH6Nx0OqjU2W3e7WbepaiG1GxdDsBRy', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 548121395)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user35', 'user35@example.com', '计算机与控制学院', '$2a$04$apkAL4cSh0fS9MpT4O9RIezvsVRaLn6WSSrqI9DGUnlrYriH98D/a', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 397188008)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user36', 'user36@example.com', '计算机与控制学院', '$2a$04$hJd5C7Yp7Q6GR5vy/D6RCuB3VKtZ2YacCcQX1Xg2lxA4Abi8orDGO', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 245746204)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user37', 'user37@example.com', '计算机与控制学院', '$2a$04$wmvLz07NDcJdwciKIvHCWelA1P2pciT/eKlul9jed7B2cLbY81T4K', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 966982283)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user38', 'user38@example.com', '计算机与控制学院', '$2a$04$/fir1dWA3Jfp1IOcbX0wUuI1ufsPAOWRqq.qrU5FPzWlszHUmpyR.', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 689825566)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user39', 'user39@example.com', '计算机与控制学院', '$2a$04$uzsItrYPcaH8Z0fnoDH.ROmz0Mnr6fjShVgbBkNkeG7eNLniHiivG', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 505075599)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user40', 'user40@example.com', '计算机与控制学院', '$2a$04$l0MtpNHEo4JlloVHWNisjuqrvUhogYxS3e6rdJF.11yIYgZl8fZm6', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 679999984)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user41', 'user41@example.com', '计算机与控制学院', '$2a$04$gbx7HlAHYPzuWEBIPtDREedgYfG3y1drQVXeF5/ZbSanO/45jf7V.', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 528533883)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user42', 'user42@example.com', '计算机与控制学院', '$2a$04$6RswQxnhfLFlVpgiZk4WxOxeTifX20mQAsNQQ3GKa5lIX0/bAUT6i', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 109680835)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user43', 'user43@example.com', '计算机与控制学院', '$2a$04$DBtKDBYbIqn43.BQNIhIjeTqIb4AJGDgGPF7V9JppMbVyFIfMwoiW', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 831432788)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user44', 'user44@example.com', '计算机与控制学院', '$2a$04$yUuixrEV3Tj0XYLSVMCcheOzcOvIZ6lIPdSpKullpS97NhwVzi89u', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 803880441)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("name", "email", "department", "password_digest", "created_at", "updated_at", "id") VALUES ('user45', 'user45@example.com', '计算机与控制学院', '$2a$04$XnvJPnJJKr7B5p/6m2hJzeyEAx9jxFjHAi0I.O5Jlc2tTpf0Dzv/i', '2017-01-07 03:57:00', '2017-01-07 03:57:00', 418188644)
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "courses" ENABLE TRIGGER ALL;ALTER TABLE "semesters" ENABLE TRIGGER ALL;ALTER TABLE "notices" ENABLE TRIGGER ALL;ALTER TABLE "grades" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+CourseTest: test_course_type_should_be_valid
+--------------------------------------------
+  [1m[35mSemester Load (0.0ms)[0m  SELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1  [["id", 457863342]]
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+--------------------------------------------
+CourseTest: test_course_week_should_be_valid
+--------------------------------------------
+  [1m[36mSemester Load (0.0ms)[0m  [1mSELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1[0m  [["id", 457863342]]
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+CourseTest: test_class_room_should_be_valid
+-------------------------------------------
+  [1m[35mSemester Load (1.0ms)[0m  SELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1  [["id", 457863342]]
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------------
+CourseTest: test_credit_should_be_valid
+---------------------------------------
+  [1m[36mSemester Load (0.0ms)[0m  [1mSELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1[0m  [["id", 457863342]]
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+CourseTest: test_teaching_type_should_be_valid
+----------------------------------------------
+  [1m[35mSemester Load (0.9ms)[0m  SELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1  [["id", 457863342]]
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+--------------------------------
+CourseTest: test_should_be_valid
+--------------------------------
+  [1m[36mSemester Load (0.4ms)[0m  [1mSELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1[0m  [["id", 457863342]]
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------
+CourseTest: test_name_should_be_valid
+-------------------------------------
+  [1m[35mSemester Load (0.0ms)[0m  SELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1  [["id", 457863342]]
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+--------------------------------------------
+CourseTest: test_course_time_should_be_valid
+--------------------------------------------
+  [1m[36mSemester Load (0.1ms)[0m  [1mSELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1[0m  [["id", 457863342]]
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+CourseTest: test_exam_type_should_be_valid
+------------------------------------------
+  [1m[35mSemester Load (0.8ms)[0m  SELECT  "semesters".* FROM "semesters" WHERE "semesters"."id" = $1 LIMIT 1  [["id", 457863342]]
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_update_when_logged_in_as_wrong_user
+-----------------------------------------------------------------------------
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "rongtongjin@gmail.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$8pybA2ZguYVsG9FGkxUxze1P.NRJzir/wiHI73rYLAukZiNBdJGNu"], ["updated_at", "2017-01-07 03:57:00.845425"], ["id", 430533587]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms)
+Started PATCH "/users/762146111" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"params"=>{"user"=>{"name"=>"彭兆卿", "email"=>"student1@test.com"}}, "id"=>"762146111"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+Redirected to http://www.example.com/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+-------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_update_when_not_logged_in
+-------------------------------------------------------------------
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+Started PATCH "/users/762146111" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"params"=>{"user"=>{"name"=>"彭兆卿", "email"=>"student1@test.com"}}, "id"=>"762146111"}
+Redirected to http://www.example.com/
+Filter chain halted as :logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-------------------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_destroy_when_logged_in_as_a_non-admin
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "rongtongjin@gmail.com"]]
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$1RGQBhuxT1PC/934wAJ7E.3Klk1cOYn3sK5DVV/wpjuDK86EClA7O"], ["updated_at", "2017-01-07 03:57:00.887409"], ["id", 430533587]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started DELETE "/users/762146111" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+Redirected to http://www.example.com/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+UsersControllerTest: test_should_redirect_edit_when_not_logged_in
+-----------------------------------------------------------------
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+Started GET "/users/762146111/edit" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"762146111"}
+Redirected to http://www.example.com/
+Filter chain halted as :logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_edit_when_logged_in_as_wrong_user
+---------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "rongtongjin@gmail.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$256gJ8AbvQx50pFQMZtpM.BkVWmHted5X328A6sHgIbovIloMBgDG"], ["updated_at", "2017-01-07 03:57:00.918420"], ["id", 430533587]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+Started GET "/users/762146111/edit" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+Redirected to http://www.example.com/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+Started GET "/users/new" for 127.0.0.1 at 2017-01-07 11:57:00 +0800
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/_form.html.erb (55.0ms)
+  Rendered users/new.html.erb within layouts/application (70.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_content.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 935ms (Views: 934.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_destroy_when_not_logged_in
+--------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started DELETE "/users/762146111" for 127.0.0.1 at 2017-01-07 11:57:01 +0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+Redirected to http://www.example.com/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------------------------------------------------------
+UserTest: test_email_addresses_should_be_unique_and_the_uppercase_will_be_converted_to_lowercase
+------------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$r2n6sCH052IWjqht1pnZu.R84zVPqn43pwaGm5d5bPKHYevohCpca"], ["created_at", "2017-01-07 03:57:01.916412"], ["updated_at", "2017-01-07 03:57:01.916412"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('     ') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------------------------
+UserTest: test_authenticated?_should_return_false_for_a_user_with_nil_digest
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-------------------------------------------------------------
+UserTest: test_email_validation_should_accept_valid_addresses
+-------------------------------------------------------------
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@foo.COM') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('alice+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+ChooseCourseTest: test_test_choose_course
+-----------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:01 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rongtongjin@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$WhscillfdTkg84rNMJKcue67599zNmyoS.lbF/woiT7RGjlN6ghZC"], ["updated_at", "2017-01-07 03:57:01.986431"], ["id", 430533587]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+  [1m[35m (17.0ms)[0m  SELECT COUNT(*) FROM "comments"
+Started GET "/courses/298486374/select" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#select as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mCourse Load (1.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "grades" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["user_id", 430533587], ["course_id", 298486374], ["created_at", "2017-01-07 03:57:02.049412"], ["updated_at", "2017-01-07 03:57:02.049412"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/courses
+Completed 302 Found in 33ms (ActiveRecord: 3.1ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+--------------------------------------------------
+UserLoginTest: test_login_with_invalid_information
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+Started GET "/sessions/login" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+Started POST "/sessions/login?session%5Bemail%5D=&session%5Bpassword%5D=" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", ""]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+UserLoginTest: test_login_without_remembering
+---------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rongtongjin@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$A2jREz5h8.ZmhO7EePzAneXFQWL.oEthdrCt1zgxagXKMlLxLhwgm"], ["updated_at", "2017-01-07 03:57:02.140521"], ["id", 430533587]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=0" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rongtongjin@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", nil], ["updated_at", "2017-01-07 03:57:02.147477"], ["id", 430533587]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+------------------------------------------
+UserLoginTest: test_login_with_remembering
+------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rongtongjin@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$ApPzPAgd2ttXtDiIUhL/vODD1ISz9lnMEX7sBLRI02Y8adBJM9ntO"], ["updated_at", "2017-01-07 03:57:02.160777"], ["id", 430533587]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------------
+UserLoginTest: test_login_with_valid_information_by_student
+-----------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+Started GET "/sessions/login" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/sessions/login?session%5Bemail%5D=rongtongjin%40gmail.com&session%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"rongtongjin@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rongtongjin@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------
+UserLoginTest: test_login_with_valid_information_followed_by_logout
+-------------------------------------------------------------------
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+Started GET "/sessions/login" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/sessions/login?session%5Bemail%5D=teacher4%40test.com&session%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"teacher4@test.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "teacher4@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_content.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.0ms)
+Started DELETE "/sessions/logout" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+Started DELETE "/sessions/logout" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------
+UserLoginTest: test_login_with_valid_information_by_teacher
+-----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+Started GET "/sessions/login" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions/login?session%5Bemail%5D=teacher4%40test.com&session%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"teacher4@test.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "teacher4@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_content.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/users/new" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users?user%5Bemail%5D=user%40invalid&user%5Bname%5D=&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"user@invalid", "name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_error_messages.html.erb (1.7ms)
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------------------------------------
+CoursesControllerTest: test_should_get_semester_by_teacher_not_student
+----------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+Started POST "/sessions/login?session%5Bemail%5D=student1%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"student1@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "student1@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$NwYvTCjaEcN/j86VFk8lN.xwRocRhwSqEQyvlSpEOjFTDOrKpNFFW"], ["updated_at", "2017-01-07 03:57:02.390545"], ["id", 762146111]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+Started GET "/courses/762146111/semester" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#semester as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started DELETE "/sessions/logout" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", nil], ["updated_at", "2017-01-07 03:57:02.400579"], ["id", 762146111]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+Started POST "/sessions/login?session%5Bemail%5D=teacher4%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"teacher4@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "teacher4@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$9gtwvfDTt5fEn/CO1.bSfe5tzmPYm3DFsciSO7lC6T658IqhxGXRu"], ["updated_at", "2017-01-07 03:57:02.408592"], ["id", 369664257]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+Started GET "/courses/369664257/semester" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#semester as HTML
+  Parameters: {"id"=>"369664257"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mSemester Load (0.0ms)[0m  SELECT "semesters".* FROM "semesters"
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."teacher_id" = $1[0m  [["teacher_id", 369664257]]
+  [1m[35mGrade Load (0.0ms)[0m  SELECT "grades".* FROM "grades" WHERE "grades"."course_id" = $1 AND "grades"."open" = $2  [["course_id", 298486374], ["open", "f"]]
+  [1m[36mGrade Load (1.0ms)[0m  [1mSELECT "grades".* FROM "grades" WHERE "grades"."course_id" = $1 AND "grades"."open" = $2[0m  [["course_id", 113629430], ["open", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "semesters".* FROM "semesters"
+  Rendered shared/_sidenav.html.erb (12.0ms)
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."teacher_id" = $1 AND "courses"."semester_id" = 369664257[0m  [["teacher_id", 369664257]]
+  Rendered courses/semester.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_chart_when_not_logged_in
+-------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mCourse Load (1.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mCourse Load (0.9ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+Started GET "/courses/298486374/chart" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#chart as HTML
+  Parameters: {"id"=>"298486374"}
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+------------------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_timetable_course_when_not_logged_in
+------------------------------------------------------------------------------
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mCourse Load (1.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+Started GET "/courses/762146111/timetable" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#timetable as HTML
+  Parameters: {"id"=>"762146111"}
+Redirected to http://www.example.com/
+Filter chain halted as :student_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------------------
+CoursesControllerTest: test_should_get_chart_by_teacher_not_student
+-------------------------------------------------------------------
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+Started POST "/sessions/login?session%5Bemail%5D=student1%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"student1@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "student1@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$Vu5XLblwqPvXYP5VtyyoxO6D1ZbaAW49Bm7N8rTooERlGJYIQhlZO"], ["updated_at", "2017-01-07 03:57:02.541613"], ["id", 762146111]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+Started GET "/courses/298486374/chart" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#chart as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started DELETE "/sessions/logout" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", nil], ["updated_at", "2017-01-07 03:57:02.554616"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+Started POST "/sessions/login?session%5Bemail%5D=teacher4%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"teacher4@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "teacher4@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$zDky8iTGqzgutT8xsLevA.hFV7zF.GMIssKCGPvp1UibNZZN9FAtm"], ["updated_at", "2017-01-07 03:57:02.564797"], ["id", 369664257]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/courses/298486374/chart" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#chart as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (1.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "grades" ON "users"."id" = "grades"."user_id" WHERE "grades"."course_id" = $1[0m  [["course_id", 298486374]]
+  [1m[35mSemester Load (0.0ms)[0m  SELECT "semesters".* FROM "semesters"
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."teacher_id" = $1[0m  [["teacher_id", 369664257]]
+  [1m[35mGrade Load (0.0ms)[0m  SELECT "grades".* FROM "grades" WHERE "grades"."course_id" = $1 AND "grades"."open" = $2  [["course_id", 298486374], ["open", "f"]]
+  [1m[36mGrade Load (1.1ms)[0m  [1mSELECT "grades".* FROM "grades" WHERE "grades"."course_id" = $1 AND "grades"."open" = $2[0m  [["course_id", 113629430], ["open", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "semesters".* FROM "semesters"
+  Rendered shared/_sidenav.html.erb (17.9ms)
+  Rendered courses/chart.html.erb within layouts/application (19.1ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 3.1ms)
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_courses_when_not_logged_in
+---------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 113629430]]
+Started GET "/courses" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#index as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_semester_when_not_logged_in
+----------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 113629430]]
+Started GET "/courses/762146111/semester" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#semester as HTML
+  Parameters: {"id"=>"762146111"}
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-------------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_quit_course_when_not_logged_in
+-------------------------------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (1.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mCourse Load (1.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 113629430]]
+Started GET "/courses/762146111/quit" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#quit as HTML
+  Parameters: {"id"=>"762146111"}
+Redirected to http://www.example.com/
+Filter chain halted as :student_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-----------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_new_when_not_logged_in
+-----------------------------------------------------------------
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 113629430]]
+Started GET "/courses/new" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#new as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_selected_when_not_logged_in
+----------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 113629430]]
+Started GET "/courses/298486374/selected" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#selected as HTML
+  Parameters: {"id"=>"298486374"}
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------------------------
+CoursesControllerTest: test_should_get_selected_by_teacher_not_student
+----------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 369664257]]
+  [1m[35mCourse Load (0.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mCourse Load (1.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mCourse Load (1.0ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 113629430]]
+Started POST "/sessions/login?session%5Bemail%5D=student1%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"student1@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "student1@test.com"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$aDKMMdtRLlLfMky5Jxih6OH9QNW5MFNitIMx8EOkriKp.JZHXD4XS"], ["updated_at", "2017-01-07 03:57:02.692735"], ["id", 762146111]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+Started GET "/courses/762146111/selected" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#selected as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+Redirected to http://www.example.com/
+Filter chain halted as :teacher_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started DELETE "/sessions/logout" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#destroy as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36m (1.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", nil], ["updated_at", "2017-01-07 03:57:02.702819"], ["id", 762146111]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+Started POST "/sessions/login?session%5Bemail%5D=teacher4%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"teacher4@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "teacher4@test.com"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$6.TYF4mKVNZV3q5uDY8PlOh3uKg0qr5ruzatuEMJLAZymVsRe9F6W"], ["updated_at", "2017-01-07 03:57:02.708391"], ["id", 369664257]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.6ms)
+Started GET "/courses/298486374/selected" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#selected as HTML
+  Parameters: {"id"=>"298486374"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 298486374]]
+  [1m[35mSemester Load (0.0ms)[0m  SELECT "semesters".* FROM "semesters"
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."teacher_id" = $1[0m  [["teacher_id", 369664257]]
+  [1m[35mGrade Load (0.9ms)[0m  SELECT "grades".* FROM "grades" WHERE "grades"."course_id" = $1 AND "grades"."open" = $2  [["course_id", 298486374], ["open", "f"]]
+  [1m[36mGrade Load (0.0ms)[0m  [1mSELECT "grades".* FROM "grades" WHERE "grades"."course_id" = $1 AND "grades"."open" = $2[0m  [["course_id", 113629430], ["open", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "semesters".* FROM "semesters"
+  Rendered shared/_sidenav.html.erb (8.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "grades" ON "users"."id" = "grades"."user_id" WHERE "grades"."course_id" = $1[0m  [["course_id", 298486374]]
+  Rendered courses/selected.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 36ms (Views: 24.2ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+---------------------------------------------------------------------------
+CoursesControllerTest: test_should_not_get_select_course_when_not_logged_in
+---------------------------------------------------------------------------
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 369664257]]
+  [1m[36mCourse Load (0.0ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35mCourse Load (1.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 298486374]]
+  [1m[36mCourse Load (0.7ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+Started GET "/courses/762146111/select" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by CoursesController#select as HTML
+  Parameters: {"id"=>"762146111"}
+Redirected to http://www.example.com/
+Filter chain halted as :student_logged_in rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+------------------------------------------
+SiteLayoutTest: test_homepage_layout_links
+------------------------------------------
+Started GET "/" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+NoticesControllerTest: test_should_get_index
+--------------------------------------------
+Processing by NoticesController#index as HTML
+  [1m[35mNotice Load (1.0ms)[0m  SELECT "notices".* FROM "notices"  ORDER BY updated_at DESC
+  Rendered notices/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------------------
+UsersEditTest: test_successful_edit_with_friendly_forwarding
+------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+Started POST "/sessions/login?session%5Bemail%5D=student1%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"student1@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "student1@test.com"]]
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$NG26TufENajXyvibc4T3z.e3eDh/13vqcVcgGNqO7R6dbTQfuyn06"], ["updated_at", "2017-01-07 03:57:02.855930"], ["id", 762146111]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+Started GET "/users/762146111/edit" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "762146111"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_content.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+Started PATCH "/users/762146111?user%5Bemail%5D=foo%40bar.com&user%5Bname%5D=Foo+Bar&user%5Bpassword%5D=&user%5Bpassword_confirmation%5D=" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"foo@bar.com", "name"=>"Foo Bar", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"762146111"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "762146111"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('foo@bar.com') AND "users"."id" != 762146111) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "name" = $1, "email" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["name", "Foo Bar"], ["email", "foo@bar.com"], ["updated_at", "2017-01-07 03:57:02.885036"], ["id", 762146111]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-------------------------------------
+UsersEditTest: test_unsuccessful_edit
+-------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+Started POST "/sessions/login?session%5Bemail%5D=student1%40test.com&session%5Bpassword%5D=[FILTERED]&session%5Bremember_me%5D=1" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"student1@test.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "student1@test.com"]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$nRf5HTieMyIYaMHl2PIgfukPr6lLxuer3c2FS/gZt0ix.2cY6xHwa"], ["updated_at", "2017-01-07 03:57:02.898926"], ["id", 762146111]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+Started GET "/users/762146111/edit" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "762146111"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_content.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.1ms)
+Started PATCH "/users/762146111?user%5Bemail%5D=foo%40invalid&user%5Bname%5D=&user%5Bpassword%5D=[FILTERED]&user%5Bpassword_confirmation%5D=[FILTERED]" for 127.0.0.1 at 2017-01-07 11:57:02 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"foo@invalid", "name"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"762146111"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 762146111]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "762146111"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('foo@invalid') AND "users"."id" != 762146111) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+-------------------------------------------------------------------------------
+SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$APcme7FqgixlX0XkFBMKoOWax.9mk7GZORmXXm9kEXH4TqzxNwBeO"], ["updated_at", "2017-01-07 03:57:02.926927"], ["id", 430533587]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["remember_digest", "$2a$04$oesuCLSBLU2s7HZqAl9qhuIaVZQnctwKyWFMn0jbAiUeGuYWI7TCS"], ["updated_at", "2017-01-07 03:57:02.930681"], ["id", 430533587]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 430533587]]
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+----------------------------------------------------------------------------
+SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+----------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "remember_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_digest", "$2a$04$.npzSJaooBDKKIlUEZNTh.U91LBDSHbug5/IjTHHmwnDNIPY4YVEi"], ["updated_at", "2017-01-07 03:57:02.939941"], ["id", 430533587]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 430533587]]
+  [1m[35m (1.0ms)[0m  ROLLBACK

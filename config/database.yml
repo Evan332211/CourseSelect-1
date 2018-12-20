@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
 #  host: 192.168.177.135
   username: postgres
-  password: 161240122
+  password: jin19930910
   pool: 5
 
 development:

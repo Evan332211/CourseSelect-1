@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :grades
   has_many :courses, through: :grades
+  has_many :courses, through: :comments
   has_many :teaching_courses, class_name: "Course", foreign_key: :teacher_id
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

@@ -27,7 +27,6 @@
             <tbody>
             <% @course.each do |course| %>
                 <tr>
-
                   <td><%= course.course_code %></td>
                   <td><%= course.name %>
                     <% @is_open_course = is_open_course(course, current_user) %>
