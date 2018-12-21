@@ -12,6 +12,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20170107051134) do
+<<<<<<< HEAD
+=======
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+>>>>>>> 84adaaf472f181c8f69723e7aed7244306b323b0
 
   create_table "comments", force: :cascade do |t|
     t.integer  "course_id",            limit: 4
@@ -94,10 +100,17 @@ ActiveRecord::Schema.define(version: 20170107051134) do
   end
 
   create_table "semesters", force: :cascade do |t|
+<<<<<<< HEAD
     t.string   "info",       limit: 255,                 null: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_open",                default: false
+=======
+    t.string   "info",                       null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "is_open",    default: false
+>>>>>>> 84adaaf472f181c8f69723e7aed7244306b323b0
   end
 
   create_table "users", force: :cascade do |t|
