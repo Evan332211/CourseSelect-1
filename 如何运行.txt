@@ -1,12 +1,18 @@
-0. 如果有新添gem包，则bundle install
-1. 数据库密码修改为自己的
+0. 锟斤拷锟斤拷锟斤拷锟斤拷锟絞em锟斤拷锟斤拷锟斤拷bundle install
+1. 锟斤拷锟捷匡拷锟斤拷锟斤拷锟睫革拷为锟皆硷拷锟斤拷
 
 
-2. 如果修改了数据库，则rake db:migrate 错误
+2. 锟斤拷锟斤拷薷锟斤拷锟斤拷锟斤拷菘猓拷锟絩ake db:migrate 锟斤拷锟斤拷
 
- 首先 删除自己本地数据库courselect_development，然后新建一个courselect_development
+ 锟斤拷锟斤拷 删锟斤拷锟皆硷拷锟斤拷锟斤拷锟斤拷锟捷匡拷courselect_development锟斤拷然锟斤拷锟铰斤拷一锟斤拷courselect_development
 
-再运行 migrate
+锟斤拷锟斤拷锟斤拷 migrate
 
-如果rake aborted ,运行 bundle update rake，然后再试。
-3. 导入数据rake db:seed
+锟斤拷锟絩ake aborted ,锟斤拷锟斤拷 bundle update rake锟斤拷然锟斤拷锟斤拷锟皆★拷
+3. 锟斤拷锟斤拷锟斤拷锟斤拷rake db:seed
+
+before use :bundle update,because some dependency is out-of-date
+change /etc/postgresql/10/main$ sudo vi pg_hba.conf xiugaiquanxian
+then rake db:migrate:reset(clear all)
+then rake db:seed
+rails s is ok!
