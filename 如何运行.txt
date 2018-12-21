@@ -16,3 +16,5 @@ change /etc/postgresql/10/main$ sudo vi pg_hba.conf xiugaiquanxian
 then rake db:migrate:reset(clear all)
 then rake db:seed
 rails s is ok!
+
+In this app,database uses mysql and it's not in the same host,you should change the database.yml to identify the database!
