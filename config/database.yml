@@ -1,10 +1,19 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-#  host: 192.168.177.135
-  username: postgres
-  password: jin19930910
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: courseselect_test
   pool: 5
+  username: root
+  password: 123456789
+  host: 192.168.177.203
+  port: 3306
+#  adapter: postgresql
+#  encoding: unicode
+##  host: 192.168.177.135
+#  username: postgres
+#  password: jin19930910
+#  pool: 5
 
 development:
   <<: *default
@@ -18,5 +27,14 @@ test:
   database: courseselect_test
 
 production:
-  <<: *default
-  database: courseselect_developement
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: courseselect_test
+  pool: 5
+  username: root
+  password: 123456789
+  host: 192.168.177.203
+  port: 3306
+#  <<: *default
+#  database: courseselect_developement
